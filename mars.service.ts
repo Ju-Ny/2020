@@ -24,10 +24,8 @@ export class MarsService {
     this.pvm = data.Date
   
     //console.log(data.Countries); 
-    
-    
-  }
-    
+      
+    } 
     )
-}
+  }
 }
