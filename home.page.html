@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     <h3> Corona API</h3>
+    </ion-title>
+    <div class = "ion-padding">
+      <div class="ion-align-self-center" >
+        {{mars.date| date:"dd/MM/yyyy"}}
+      </div>
+    </div>
+    <div></div>
+    <div class = "ion-padding"><p>(Tiedot päivitetty automaattisesti: {{mars.pvm | date:"dd.MM.yyyy"}} klo:{{mars.pvm | date:"HH:MM"}} )</p></div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card> 
+    <ion-list class = "ion-padding">
+
+      <ion-item>
+        <h3> <ion-button href = "https://thl.fi/fi/web/infektiotaudit-ja-rokotukset/ajankohtaista/ajankohtaista-koronaviruksesta-covid-19?gclid=Cj0KCQjw9tbzBRDVARIsAMBplx8ZMe7I0jskFmF1vNzZ3kKgosGC0kTVsJHivGntEFnvIsIis7Ti-IYaAt27EALw_wcB"> Terveyden ja hyvinvoinnin laitos</ion-button></h3>
+      </ion-item>
+
+      <ion-item>
+            <h3><ion-button href = "https://www.arcgis.com/apps/opsdashboard/index.html#/85320e2ea5424dfaaa75ae62e5c06e61">CSSE at Johns Hopkins University</ion-button></h3>
+      </ion-item>
+
+            <h4 class= "ion-padding">Tämän sovelluksen tiedot perustuvat Johns Hopkinsin tietokantaan.</h4> 
+            <h5 class= "ion-padding">Koronavirus tiedot maittain:</h5>
+  
+      <ion-item *ngFor="let lista of mars.listat; let i = index" [routerLink]="'/kuva/' + i">
+            <ion-label class="ion-text-wrap"> {{lista.Country}} </ion-label> 
+      </ion-item>
+    
+    </ion-list>
+  </ion-card>
+    © 2020 Jukka Nyyssönen , Xamk
+</ion-content>
