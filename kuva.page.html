@@ -8,18 +8,14 @@
         </ion-title>
   </ion-toolbar>
 </ion-header>
-
-
-    <div class="ion-align-self-center">
-      <h3>{{maa.Country}}</h3>
-    </div>
-
+        <div class="ion-align-self-center">
+          <h3>{{maa.Country}}</h3>
+        </div>
 <ion-content>
   <div class = "ion-padding">
     <ion-card>
       <ion-card>
-       <ion-list>
-
+        <ion-list>
                   <ion-item color ="success" *ngIf="maa.NewConfirmed < 1"> Varmistetut tartunnat tänään: {{maa.NewConfirmed}}</ion-item>
                      
                   <ion-item color ="danger" *ngIf="maa.NewConfirmed > 0"> Varmistetut tartunnat tänään: {{maa.NewConfirmed}} </ion-item>
@@ -32,10 +28,9 @@
 
                   <ion-item></ion-item>
 
-                  <ion-item color="success">Parantuneet: {{maa.TotalRecovered}} </ion-item>
-       
-     </ion-list>
-  </ion-card>
-</ion-card>
-</div>
-</ion-content>
+                  <ion-item color="success">Parantuneet: {{maa.TotalRecovered}} </ion-item>  
+       </ion-list>
+      </ion-card>
+    </ion-card>
+  </div>
+ </ion-content>
