@@ -31,7 +31,6 @@ app.use(express.static("./public"));
 
     res.render("index" , {"kayttajat" : data});
     
-
         })
 
     });
@@ -48,7 +47,6 @@ app.use(express.static("./public"));
 
     });
 
-
     app.post("/tallenna/", (req, res) => {
 
         kayttajat.tallennaTreenit(req.body, (err) => {
@@ -59,28 +57,7 @@ app.use(express.static("./public"));
 
         }) 
 
-    });  
-
-    /*app.post("/kirjaudu/", (req, res) => {
-
-                let nimi = req.body.nimi;
-                let salasana = req.body.salasana;
-                
-                if (nimi != "" && salasana !="")     {
-
-                    res.send("Oikein")
-
-                    res.redirect("aloita")
-    
-                }
-
-                else     {
-                        console.log("Skulaa");
-                    res.redirect("/kirjaudu")
-     
-                 }     
-
-    });*/
+    });
 
     app.get("/kaikki", (req, res) => {
         
